@@ -21,6 +21,17 @@ const Project = g.model('Project',{
   createdBy: g.relation(() => User),
 })
 
+const Courses = g.model('Courses',{
+  title: g.string().length({ min: 3}),
+  description: g.string(),
+  image: g.url(),
+  liveSitrUrl: g.url(),
+  githubUrl: g.url(),
+  category: g.string().search(),
+  createdBy: g.relation(() => User),
+})
+
+
 export default config({ 
   schema: g
 
